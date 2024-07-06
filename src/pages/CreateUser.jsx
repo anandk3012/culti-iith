@@ -37,7 +37,7 @@ export default function CreateUser() {
 
   return (
     <div className='min-h-screen flex items-center'>
-      <div className='flex flex-col w-2/3 mx-auto my-5 gap-4 p-4 rounded-lg border-2 border-solid border-black'>
+      <div className='flex flex-col w-1/2 mx-auto my-5 gap-4 p-4 rounded-lg border-2 border-solid border-black'>
         <h1 className='text-2xl font-bold'>Create User</h1>
         <input type="text" name="firstname" id="1" placeholder='First Name'
           onChange={(e) => {

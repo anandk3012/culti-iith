@@ -11,7 +11,7 @@ export default function Login() {
 
   return (
     <div className="min-h-screen flex items-center">
-      <div className="flex flex-col justify-evenly w-2/3 mx-auto gap-4 p-4 rounded-lg border-2 border-solid border-black">
+      <div className="flex flex-col justify-evenly w-1/2 mx-auto gap-4 p-4 rounded-lg border-2 border-solid border-black">
         <h1 className='text-2xl font-bold'>Login</h1>
         <input
           type="email"
