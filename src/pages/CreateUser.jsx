@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { signUp } from '../functions/auth';
+import { Link } from 'react-router-dom';
 
 export default function CreateUser() {
   const [firstName, setFirstName] = useState('');
@@ -49,7 +50,7 @@ export default function CreateUser() {
   
 
   return (
-    <div className='min-h-screen flex items-center bg-white'>
+    <div className='min-h-screen flex items-center bg-[#FEC601]'>
       <div className='flex flex-col w-1/3 md-w-1/2 px-10 mx-auto my-5 gap-4 py-10 rounded-3xl  border-none shadow-2xl bg-gray-100'>
         <h1 className='text-3xl text-center font-bold'>Sign Up</h1>
         <input type="text" name="firstname" id="1" placeholder='First Name'
@@ -83,9 +84,7 @@ export default function CreateUser() {
             (passwordMatch && confirmPassword!=' ') ? <></> :
               <p className='text-red-500'>Passwords do not match !!</p>
           }
-        <div>
-
-        </div>
+        <Link to="/login" className='w-fit text-sm text-gray-700 underline text-center mx-auto'>Already have an account? <br />Login</Link>
         <button className='bg-yellow-400 hover:bg-yellow-500 text-slate-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
           onClick={handleCreateUser}
 
