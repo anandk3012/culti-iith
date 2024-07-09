@@ -10,7 +10,7 @@ export default function Navbar() {
     }
     return (
         <div>
-            <div className='w-full p-4 flex justify-between bg-yellow-400 font-bold font-Inter'>
+            <div className='w-full p-4 flex justify-between bg-[#FEC601] font-bold font-Inter'>
                 <div className='w-auto flex text-center items-center text-xl '>CULTI IITH</div>
                 <nav className='w-1/3 flex justify-evenly '>
                     {isLoggedOut ?

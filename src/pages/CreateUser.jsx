@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { signUp } from '../functions/auth';
 
 export default function CreateUser() {
@@ -7,6 +7,12 @@ export default function CreateUser() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+
+  const [passwordMatch, setPasswordMatch] = useState(false);
+
+  useEffect(() => {
+    checkConfirmPwd();
+  },[password,confirmPassword])
 
   const userData = {
     firstName,
@@ -32,13 +38,20 @@ export default function CreateUser() {
       console.log(userData);
     }
   }
-
-
+  const checkConfirmPwd = () => {
+    if (password != confirmPassword) {
+      setPasswordMatch(false);
+    }
+    else {
+      setPasswordMatch(true);
+    }
+  }
+  
 
   return (
     <div className='min-h-screen flex items-center'>
-      <div className='flex flex-col w-1/2 mx-auto my-5 gap-4 p-4 rounded-lg border-2 border-solid border-black'>
-        <h1 className='text-2xl font-bold'>Create User</h1>
+      <div className='flex flex-col w-1/3 md-w-1/2 px-10 mx-auto my-5 gap-4 py-7 rounded-lg  border-none shadow-2xl'>
+        <h1 className='text-3xl text-center font-bold'>Sign Up</h1>
         <input type="text" name="firstname" id="1" placeholder='First Name'
           onChange={(e) => {
             setFirstName(e.target.value);
@@ -57,15 +70,26 @@ export default function CreateUser() {
         <input type="password" name="password" id="4" placeholder='password'
           onChange={(e) => {
             setPassword(e.target.value);
+            checkConfirmPwd();
           }}
         />
         <input type="password" name="confirmpwd" id="5" placeholder='confirm password'
           onChange={(e) => {
+            checkConfirmPwd();
             setConfirmPassword(e.target.value);
           }}
         />
+          {
+            (passwordMatch && confirmPassword!=' ') ? <></> :
+              <p className='text-red-500'>Passwords do not match !!</p>
+          }
+        <div>
+
+        </div>
         <button className='bg-yellow-400 hover:bg-yellow-500 text-slate-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
           onClick={handleCreateUser}
+
+          disabled={!passwordMatch}
         >Register</button>
       </div>
     </div>
