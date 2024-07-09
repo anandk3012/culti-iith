@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { signIn, signInWithGoogle } from "../functions/auth";
 import { Link } from "react-router-dom";
-import GoogleButton from "react-google-button";
+import googleLogo from '../assets/google-color-svgrepo-com.png'
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -15,8 +15,8 @@ export default function Login() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-evenly bg-[#FEC601]">
-      <div className="flex flex-col w-1/3 md-w-1/2 px-10 mx-auto my-5 gap-4 py-10 rounded-3xl  border-none shadow-2xl bg-gray-100">
+    <div className="min-h-screen flex items-center bg-[#ffdb57]">
+      <div className="flex flex-col w-1/3 md-w-1/2 px-10 mx-auto my-5 gap-4 py-10 rounded-3xl border-solid shadow-2xl bg-gray-100">
         <h1 className='text-2xl font-bold'>Login</h1>
         <input
           type="email"
@@ -39,7 +39,8 @@ export default function Login() {
           Login
         </button>
         <Link to="/create-user" className="text-sm text-gray-700 underline text-center" > Don&apos;t have an account? Sign up</Link>
-        <button className="text-sm w-fit p-3 rounded-3xl bg-blue-500" onClick={handleGoogleLogin}>Continue With Google</button>
+        <div className="text-center text-gray-700">or</div>
+        <button className="flex items-center gap-3 text-sm font-semibold w-fit p-3 rounded-3xl bg-yellow-400 hover:bg-yellow-500 mx-auto" onClick={handleGoogleLogin}> <img src={googleLogo} alt="" className="w-6 h-6" /> <p> Continue With Google</p></button>
       </div>
     </div>
   );

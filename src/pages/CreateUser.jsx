@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
-import { signUp } from '../functions/auth';
+import { signUp, signInWithGoogle } from '../functions/auth';
 import { Link } from 'react-router-dom';
+import googleLogo from '../assets/google-color-svgrepo-com.png'
 
 export default function CreateUser() {
   const [firstName, setFirstName] = useState('');
@@ -13,7 +14,7 @@ export default function CreateUser() {
 
   useEffect(() => {
     checkConfirmPwd();
-  },[password,confirmPassword])
+  }, [password, confirmPassword])
 
   const userData = {
     firstName,
@@ -47,10 +48,13 @@ export default function CreateUser() {
       setPasswordMatch(true);
     }
   }
-  
+
+  const handleGoogleLogin = () => {
+    signInWithGoogle();
+  };
 
   return (
-    <div className='min-h-screen flex items-center bg-[#FEC601]'>
+    <div className='min-h-screen flex items-center bg-[#ffdb57]'>
       <div className='flex flex-col w-1/3 md-w-1/2 px-10 mx-auto my-5 gap-4 py-10 rounded-3xl  border-none shadow-2xl bg-gray-100'>
         <h1 className='text-3xl text-center font-bold'>Sign Up</h1>
         <input type="text" name="firstname" id="1" placeholder='First Name'
@@ -80,16 +84,19 @@ export default function CreateUser() {
             setConfirmPassword(e.target.value);
           }}
         />
-          {
-            (passwordMatch && confirmPassword!=' ') ? <></> :
-              <p className='text-red-500'>Passwords do not match !!</p>
-          }
+        {
+          (passwordMatch && confirmPassword != ' ') ? <></> :
+            <p className='text-red-500'>Passwords do not match !!</p>
+        }
         <Link to="/login" className='w-fit text-sm text-gray-700 underline text-center mx-auto'>Already have an account? <br />Login</Link>
         <button className='bg-yellow-400 hover:bg-yellow-500 text-slate-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
           onClick={handleCreateUser}
 
           disabled={!passwordMatch}
         >Register</button>
+
+        <div className="text-center text-gray-700">or</div>
+        <button className="flex items-center gap-3 text-sm font-semibold w-fit p-3 rounded-3xl bg-yellow-400 hover:bg-yellow-500 mx-auto" onClick={handleGoogleLogin}> <img src={googleLogo} alt="" className="w-6 h-6" /> <p> Continue With Google</p></button>
       </div>
     </div>
   )
