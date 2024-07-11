@@ -54,49 +54,63 @@ export default function CreateUser() {
   };
 
   return (
-    <div className='min-h-screen flex bg-[#FEC601]'>
-      <div className='flex flex-col h-fit sm:w-1/2 md:w-1/3 px-10 mx-auto my-5 gap-4 py-10 rounded-3xl  border-none shadow-2xl shadow-black bg-gray-100'>
-        <h1 className='text-3xl text-center font-bold'>Sign Up</h1>
+    <div className='min-h-screen flex bg-[#292927] text-white'>
+      <div className='flex flex-col h-fit w-[90%] md:w-[40%] px-10 mx-auto my-5 gap-4 pt-6 pb-10 rounded-3xl  border-none shadow-2xl shadow-black bg-[#3E3E3A]'>
+        <h1 className='text-3xl text-center font-bold mb-5'>Sign Up</h1>
         <input type="text" name="firstname" id="1" placeholder='First Name'
           onChange={(e) => {
             setFirstName(e.target.value);
           }}
+          className=" bg-[#292927] border-none rounded-[3rem] pl-4 text-white"
+
         />
         <input type="text" name="lastname" id="2" placeholder='Last Name'
           onChange={(e) => {
             setLastName(e.target.value);
           }}
+          className=" bg-[#292927] border-none rounded-[3rem] pl-4 text-white"
+
         />
         <input type="email" name="email id" id="3" placeholder='Email ID'
           onChange={(e) => {
             setEmail(e.target.value);
           }}
+          className=" bg-[#292927] border-none rounded-[3rem] pl-4 text-white"
+
         />
         <input type="password" name="password" id="4" placeholder='password'
           onChange={(e) => {
             setPassword(e.target.value);
             checkConfirmPwd();
           }}
+          className=" bg-[#292927] border-none rounded-[3rem] pl-4 text-white"
+
         />
         <input type="password" name="confirmpwd" id="5" placeholder='confirm password'
           onChange={(e) => {
             checkConfirmPwd();
             setConfirmPassword(e.target.value);
           }}
+          className=" bg-[#292927] border-none rounded-[3rem] pl-4 text-white"
+
         />
         {
           (passwordMatch && confirmPassword != ' ') ? <></> :
             <p className='text-red-500'>Passwords do not match !!</p>
         }
-        <Link to="/login" className='w-fit text-sm text-gray-700 underline text-center mx-auto'>Already have an account? <br />Login</Link>
-        <button className='bg-yellow-400 hover:bg-yellow-500 text-slate-800 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline'
+        <Link to="/login" className='w-fit mx-auto text-sm text-white underline text-center'>Already have an account? <br />Login</Link>
+        <button className='bg-[#FEC601] hover:bg-yellow-500 text-black text-xl font-medium py-3 px-4 rounded-[3rem] focus:outline-none focus:shadow-outline'
           onClick={handleCreateUser}
 
           disabled={!passwordMatch}
         >Register</button>
 
-        <div className="text-center text-gray-700">or</div>
-        <button className="flex items-center gap-3 text-sm font-semibold w-fit p-3 rounded-3xl bg-yellow-400 hover:bg-yellow-500 mx-auto" onClick={handleGoogleLogin}> <img src={googleLogo} alt="" className="w-6 h-6" /> <p> Continue With Google</p></button>
+        <div className="flex items-center justify-evenly gap-2">
+          <hr className="w-1/3" />
+          <p>OR</p>
+          <hr className="w-1/3" />
+        </div>
+        <button className="flex items-center gap-3 text-black text-sm font-medium w-fit p-3 rounded-[3rem] bg-[#FEC601] hover:bg-yellow-500 mx-auto" onClick={handleGoogleLogin}> <img src={googleLogo} alt="" className="w-6 h-6" /> <p> Continue With Google</p></button>
       </div>
     </div>
   )

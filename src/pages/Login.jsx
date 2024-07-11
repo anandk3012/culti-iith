@@ -16,7 +16,7 @@ export default function Login() {
 
   return (
     <div className="min-h-screen flex bg-[#292927] text-white">
-      <div className="flex flex-col h-fit sm:w-1/2 md:w-1/3 px-10 mx-auto my-5 gap-4 pt-6 pb-10 rounded-3xl  border-none shadow-2xl shadow-black bg-[#3E3E3A] ">
+      <div className="flex flex-col h-fit w-[90%] md:w-[40%] px-10 mx-auto my-5 gap-4 pt-6 pb-10 rounded-3xl  border-none shadow-2xl shadow-black bg-[#3E3E3A] ">
         <h1 className='text-3xl text-center font-bold mb-5'>Login</h1>
         <input
           type="email"
@@ -40,12 +40,15 @@ export default function Login() {
         >
           Login
         </button>
+        
         <Link to="/create-user" className="text-sm text-white underline text-center" > Don&apos;t have an account? Sign up</Link>
+
         <div className="flex items-center justify-evenly gap-2">
           <hr className="w-1/3"/>
           <p>OR</p>
           <hr className="w-1/3"/>
         </div>
+
         <button className="flex items-center gap-3 text-black text-sm font-medium w-fit p-3 rounded-[3rem] bg-[#FEC601] hover:bg-yellow-500 mx-auto" onClick={handleGoogleLogin}> <img src={googleLogo} alt="" className="w-7 h-7" /> <p> Continue With Google</p></button>
       </div>
     </div>
