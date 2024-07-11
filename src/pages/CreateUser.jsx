@@ -55,7 +55,7 @@ export default function CreateUser() {
 
   return (
     <div className='min-h-screen flex bg-[#FEC601]'>
-      <div className='flex flex-col h-fit w-1/3 md-w-1/2 px-10 mx-auto my-5 gap-4 py-10 rounded-3xl  border-none shadow-2xl shadow-black bg-gray-100'>
+      <div className='flex flex-col h-fit sm:w-1/2 md:w-1/3 px-10 mx-auto my-5 gap-4 py-10 rounded-3xl  border-none shadow-2xl shadow-black bg-gray-100'>
         <h1 className='text-3xl text-center font-bold'>Sign Up</h1>
         <input type="text" name="firstname" id="1" placeholder='First Name'
           onChange={(e) => {
