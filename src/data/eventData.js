@@ -31,6 +31,11 @@ export const dateWiseEvents = {
     }],
     "2024-07-21": [
         {
+            "id": 7.1,
+            "club": "IITH",
+            "title": "Guru Pournima"
+        },
+        {
             "id": 7,
             "club": "Culti IITH",
             "title": "Back to college Day"

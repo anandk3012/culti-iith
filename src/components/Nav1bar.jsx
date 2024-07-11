@@ -39,13 +39,15 @@ export default function Nav1bar() {
                             </div>
                         ) : (
                             <div className='flex flex-col lg:flex-row lg:items-center gap-4 text-md font-medium mr-4'>
+                                <Link className='p-3 hover:text-white ' to="/" onClick={toggleMenu}>Home</Link>
+                                <Link className='p-3 hover:text-white ' to="/dashboard" onClick={toggleMenu}>Dashboard</Link>
                                 <Link
                                     to='/'
                                     onClick={() => {
                                         handleLogOut();
                                         toggleMenu();
                                     }}
-                                    className=' hover:text-[#FFC600] px-4 py-2 rounded-md'
+                                    className=' hover:text-white p-3 '
                                 >
                                     Logout
                                 </Link>
