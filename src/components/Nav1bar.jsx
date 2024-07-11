@@ -38,16 +38,18 @@ export default function Nav1bar() {
                                 <Link className='p-3 pb-6 md:pb-3 hover:text-white' to="/create-user" onClick={toggleMenu}>Register</Link>
                             </div>
                         ) : (
-                            <Link
-                                to='/'
-                                onClick={() => {
-                                    handleLogOut();
-                                    toggleMenu();
-                                }}
-                                className='p-3 hover:text-[#FFC600] px-4 py-2 rounded-md'
-                            >
-                                Logout
-                            </Link>
+                            <div className='flex flex-col lg:flex-row lg:items-center gap-4 text-md font-medium mr-4'>
+                                <Link
+                                    to='/'
+                                    onClick={() => {
+                                        handleLogOut();
+                                        toggleMenu();
+                                    }}
+                                    className=' hover:text-[#FFC600] px-4 py-2 rounded-md'
+                                >
+                                    Logout
+                                </Link>
+                            </div>
                         )}
                     </nav>
                 </div>
