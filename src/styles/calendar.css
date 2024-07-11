@@ -55,9 +55,11 @@ border: 1px solid transparent;
   margin-bottom: 10px;
 }
 
+
 .react-calendar__navigation__label {
   width: auto;
-  font-weight: medium;
+  text-decoration: none;
+  font-weight: bold;
   padding: 1%;
   background-color: #52524D;
   border-radius: 3rem;
