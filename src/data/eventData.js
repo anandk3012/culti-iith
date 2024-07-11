@@ -1,7 +1,7 @@
 export const dateWiseEvents = {
     "2024-01-01": [{
         "id": 1,
-        "club": "Culti IITH",
+        "club": "IITH",
         "title": "New Year"
     }],
     "2024-01-26": [{
