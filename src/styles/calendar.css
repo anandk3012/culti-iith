@@ -30,22 +30,31 @@
   text-align: center;
   background: transparent;
   border-radius: 4px;
-  transition: background 0.3s;
+  transition: background 0.1s;
+}
+
+.react-calendar__tile{
+border: 1px solid transparent;
 }
 
 .react-calendar__tile--active {
   background: #FFC600;
+  border:none;
+  border-radius: 3rem;
   color: black;
 }
 
 .react-calendar__tile--now {
-  background: #FFC600;
-  color: black;
+  background-color: #292927;
+  border: 1px solid white;
+  border-radius: 3rem;
+  color: white;
 }
 
 .react-calendar__tile:hover {
-  background: #FFC600;
-  color: black;
+  border: 1px solid #FFC600;
+  border-radius: 3rem;
+  color: #FFC600;
 }
 
 .react-calendar__navigation {

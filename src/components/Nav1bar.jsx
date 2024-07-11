@@ -29,7 +29,7 @@ export default function Nav1bar() {
                             {isOpen ? <FaTimes size={25} /> : <FaBars size={25} />}
                         </button>
                     </div>
-                    <nav className={`lg:flex lg:items-center ${isOpen ? 'flex flex-col lg:relative absolute right-0 top-20 lg:top-auto lg:right-auto text-center w-32 rounded-lg' : 'hidden'} bg-[#3E3E3A] w-full  lg:w-auto`}>
+                    <nav className={`lg:flex lg:items-center ${isOpen ? 'flex flex-col lg:relative absolute right-4 top-24 lg:top-auto lg:right-auto text-center w-1/2 rounded-lg' : 'hidden'} bg-[#3E3E3A]   lg:w-auto`}>
                         {isLoggedOut ? (
                             <div className='flex flex-col lg:flex-row lg:items-center gap-4 text-md font-medium mr-4'>
                                 <Link className='p-3 hover:text-white ' to="/" onClick={toggleMenu}>Home</Link>
