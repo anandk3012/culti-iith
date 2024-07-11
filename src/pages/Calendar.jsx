@@ -35,7 +35,7 @@ export default function CalendarComp() {
 
 
     return (
-        <div className=" flex flex-col items-center p-5 bg-[#292927] text-white font-[Montserrat] ">
+        <div className="min-h-screen flex flex-col items-center p-5 bg-[#292927] text-white font-[Montserrat] ">
             <h1 className="text-5xl text-center text-wrap mt-5 font-medium">Calendar</h1>
             <h2 className="text-xl font-light text-center text-wrap mb-5 ">Events Calendar</h2>
             <Calendar
