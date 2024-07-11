@@ -1,20 +1,26 @@
 import React, { useEffect, useState } from "react";
 import { Calendar } from "react-calendar";
-// import 'react-calendar/dist/Calendar.css';
 import '../styles/calendar.css';
+import EventCard from "../components/EventCard";
+import { dateWiseEvents } from '../data/eventData'
 
 export default function CalendarComp() {
 
     const [date, setDate] = useState(new Date());
     const [selectedDate, setSelectedDate] = useState(date);
     const [dateEvents, setDateEvents] = useState(null);
-
+    const noEventDay = {
+        "id": 0,
+        "title": "No events available :(",
+        "club": "Please select another day"
+    }
 
     const handleChange = (date) => {
         setDate(date);
     }
     const handleClick = (date) => {
         setSelectedDate(date);
+        console.log(dateEvents);
     }
     const formatDate = (date) => {
         const offset = date.getTimezoneOffset();
@@ -23,37 +29,35 @@ export default function CalendarComp() {
     }
 
     useEffect(() => {
-        const dateWiseEvents = {
-            "2024-01-01": "New Year",
-            "2024-01-26": "Republic Day",
-            "2024-02-14": "Valentine's Day",
-            "2024-07-29": "Orientation Day",
-            "2024-07-28": "Almost start",
-            "2024-07-24": "Fee payment",
-            "2024-07-21": "Back to college Day",
-        }
         const formattedDate = formatDate(selectedDate);
         setDateEvents(dateWiseEvents[formattedDate]);
     }, [selectedDate, date])
 
-    
+
     return (
-        <div className="min-h-screen flex flex-col items-center p-5 bg-[#FEC601]">
-            <h1 className="text-3xl font-bold text-center text-wrap my-5 ">Events Calendar</h1>
+        <div className=" flex flex-col items-center p-5 bg-[#292927] text-white font-[Montserrat] ">
+            <h1 className="text-5xl text-center text-wrap mt-5 font-medium">Calendar</h1>
+            <h2 className="text-xl font-light text-center text-wrap mb-5 ">Events Calendar</h2>
             <Calendar
                 onChange={handleChange}
                 value={date}
-                className="flex flex-col flex-wrap border-2 border-solid border-black p-5 bg-white shadow-xl shadow-black"
+                className="flex flex-col flex-wrap border-none p-5 bg-[#3E3E3A] shadow-md shadow-black text-white"
                 onClickDay={handleClick}
             />
-            <div>
-                <h1 className="text-2xl font-bold text-center text-wrap my-5 ">
-                    <p>Date :<span >{selectedDate.toLocaleDateString("en-US")}</span></p>
-                </h1>
-            </div>
-            <div className="flex flex-col flex-wrap border-2 border-solid border-black p-5 bg-white shadow-xl shadow-black">
-                <h1 className="font-bold text-2xl text-center">Events</h1>
-                {!dateEvents ? <p className="font-semibold">Sorry no events on this day.. :(</p> : <p className="font-semibold text-3xl text-center text-green-700">{dateEvents}!!</p>}
+            <hr className=" w-[90%] md:w-[60%] my-10 mx-auto" />
+            <div className="w-full flex flex-col items-center">
+                <div className="flex items-center w-[90%] md:w-1/2 text-3xl text-start  mb-5 gap-5">
+                    <h1 className="ml-2">Events</h1>
+                    {/* <h1 className="">{selectedDate.toLocaleDateString("en-US")}</h1> */}
+                </div>
+                <div className="flex flex-col flex-wrap gap-5 w-[90%] md:w-1/2 ">
+                    {!dateEvents ? <EventCard key={noEventDay.id} event={noEventDay} /> :
+                        dateEvents.map((event) => {
+                            return <EventCard key={event.id} event={event} />
+                        })
+                    }
+
+                </div>
             </div>
         </div >
     )
