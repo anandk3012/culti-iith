@@ -49,8 +49,9 @@ export default function Home() {
 
 
       {/* About Section - Upcoming */}
-      <div className='w-[80%] flex flex-col items-center mx-auto'>
+      <div className='min-h-screen w-[80%] flex flex-col items-center mx-auto'>
         <h1 className='w-full flex items-center gap-5 text-2xl md:text-4xl p-4 mb-5 mt-20'> <hr className="w-[25%] md:w-[5%] border-black dark:border-white" /> About Us <hr className="w-[25%] md:w-[75%] border-black dark:border-white " /> </h1>
+        <h1>Coming soon...</h1>
       </div>
     </div>
   )
