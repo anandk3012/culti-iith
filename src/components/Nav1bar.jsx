@@ -49,7 +49,7 @@ export default function Nav1bar() {
                     <div className='flex justify-end gap-5'>
                         {/* Dark Mode toggle Button */}
                         <div className='flex items-center justify-center lg:hidden'>
-                            <button onClick={toggleDarkMode} disabled>
+                            <button onClick={toggleDarkMode} >
                                 {darkMode ? (
                                     <BiMoon className="h-6 w-6 text-[#FFC600] " />
                                 ) : (
@@ -92,7 +92,7 @@ export default function Nav1bar() {
 
                 {/* Dark Mode toggle Button */}
                 <div className='hidden lg:flex items-center justify-center w-1/12'>
-                    <button onClick={toggleDarkMode} disabled>
+                    <button onClick={toggleDarkMode} >
                         {darkMode ? (
                             <BiMoon className="h-6 w-6 text-[#FFC600] " />
                         ) : (
