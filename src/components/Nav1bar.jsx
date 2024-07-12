@@ -36,8 +36,8 @@ export default function Nav1bar() {
     };
 
     return (
-        <div className='p-4 bg-[#EBEBE6] dark:bg-[#292927]'>
-            <div className='w-full p-2 flex bg-transparent font-light items-center dark:bg-[#3E3E3A] dark:text-[#FFC600] rounded-[3rem]'>
+        <div className='p-4 bg-[#dddddb] dark:bg-[#292927]'>
+            <div className='w-full p-2 flex bg-transparent items-center dark:bg-[#3E3E3A] dark:text-[#FFC600] rounded-[3rem]'>
                 <div className='w-2/3'>
                     <Link to="/" className='flex items-center text-xl md:ml-7'>
                         <img src={cultiLogo} alt="Club Logo" className='w-14 max-h-16' />
@@ -63,7 +63,7 @@ export default function Nav1bar() {
                             </button>
                         </div>
                     </div>
-                    <nav className={`lg:flex lg:items-center ${isOpen ? 'flex flex-col lg:relative absolute right-4 top-24 lg:top-auto lg:right-auto text-center w-1/2 rounded-lg' : 'hidden'} bg-[#EBEBE6] dark:bg-[#3E3E3A] lg:w-auto`}>
+                    <nav className={`lg:flex lg:items-center ${isOpen ? 'flex flex-col lg:relative absolute right-4 top-24 lg:top-auto lg:right-auto text-center w-1/2 rounded-lg' : 'hidden'} bg-[#dddddb] dark:bg-[#3E3E3A] lg:w-auto`}>
                         {isLoggedOut ? (
                             <div className='flex flex-col lg:flex-row lg:items-center gap-4 text-md font-medium mr-4'>
                                 <Link className='p-3 dark:hover:text-white' to="/" onClick={toggleMenu}>Home</Link>
