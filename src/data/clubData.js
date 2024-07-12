@@ -6,11 +6,22 @@ import otaku from "../assets/clubImages/otaku.png"
 import ebsb from "../assets/clubImages/ebsb.jpg"
 import writing from "../assets/clubImages/writingClub.png"
 
+import Infocus from '../pages/clubPages/Infocus'
+import Shuffle from '../pages/clubPages/Shuffle'
+import Btl from '../pages/clubPages/Btl'
+import Gesture from '../pages/clubPages/Gesture'
+import Otaku from '../pages/clubPages/Otaku'
+import Ebsb from '../pages/clubPages/Ebsb'
+import Writing from '../pages/clubPages/Writing'
+import Quiz from '../pages/clubPages/Quiz'
+
 export const clubs = {
     "cultural": [
         {
             "id": 1.0,
             "name": "Infocus",
+            "clubPage":Infocus,
+            "path":"infocus",
             "logoClub": inFocus,
             "logoPng": inFocus,
             "description": "The photography club of IIT Hyderabad ",
@@ -19,6 +30,8 @@ export const clubs = {
         {
             "id": 1.1,
             "name": "Shuffle crew ",
+            "clubPage":Shuffle,
+            "path":"shuffle",
             "logoClub": shuffle,
             "logoPng": shuffle,
             "description": "IIT Hyderabad’s dance club is a lively and vigorous student organization focusing on promoting dance culture in the campus. It offers opportunity for the students to express themselves in different dance categories such as classical or modern and street dances such as hip-hop and break-dancing. A club arranges for weekend classes and dance-offs as well as competitions to create the spirit of teamwork and innovative ideas amongst the dancers.  ",
@@ -27,14 +40,44 @@ export const clubs = {
         {
             "id": 1.2,
             "name": "BehindTheLens (BTL)",
+            "clubPage":Btl,
+            "path":"btl",
             "logoClub": btl,
             "logoPng": btl,
             "description": "The behind the lens club exists to Foster the appreciation and study of film making. The purpose of our club is to give students the opportunity to approach all aspects of film and film making in a serious, meaningful, and in-depth manner.",
-            "vision": "Our vision is to get a good position in Inter IIT and promote the culture of filmmaking in the college and spread the word of our club to other colleges by participating in competitions conducted by them."
+            "vision": "Our vision is to get a good position in Inter IIT and promote the culture of filmmaking in the college and spread the word of our club to other colleges by participating in competitions conducted by them.",
+            "team":[
+                {
+                  "position":" Mentor",
+                  "name":"M Kruthisver",
+                  "photo":btl,
+                  "rollno":"ep22btech11014"
+                },
+                {
+                  "position":"Coordinator",
+                  "name":"Snehil Singh",
+                  "photo":btl,
+                  "rollno":"e222btech11050"
+                },
+                {
+                  "position":"Coordinator",
+                  "name":"Parlapalli Teja",
+                  "photo":btl,
+                  "rollno":"ic22btech11010"
+                },
+                {
+                  "position":"Coordinator",
+                  "name":"Aravind Siddhartha",
+                  "photo":btl,
+                  "rollno":"ce21btech11021"
+                }
+              ]
         },
         {
             "id": 1.3,
             "name": "Gesture: The Art Club",
+            "clubPage":Gesture,
+            "path":"gesture",
             "logoClub": gesture,
             "logoPng": gesture,
             "description": "Gesture: The Official Art Club of IIT Hyderabad, is a space to create, design and discover oneself in the traditional and modern realms of art and craft. Every year, our team comprises of like-minded people who bring out the best of creativity in themselves for the ultimate betterment of the Gesture. We are deeply passionate about art, and highly encourage people to join the group for any sessions or collaborations. Gesture is a strong platform for artistic talent and exploration. ",
@@ -43,23 +86,52 @@ export const clubs = {
         {
             "id": 1.4,
             "name": "Otaku Club",
+            "clubPage":Otaku,
+            "path":"otaku",
             "logoClub": otaku,
             "logoPng": otaku,
             "description": "The Otaku Club is IITH's anime and manga club whose sole purpose is to promote this art form and Japanese culture to the whole campus.",
-            "vision": "Our vision is to promote the Japanese culture and its art form through events and bring together a community of anime and manga enthusiasts."
-        }, {
+            "vision": "Our vision is to promote the Japanese culture and its art form through events and bring together a community of anime and manga enthusiasts.",
+            "team": [
+                {
+                  "name":"SATHWIK",
+                  "photo":otaku,
+                  "position":"Coordinator",
+                  "rollno":"ee22btech11012"
+                }
+              ]
+        }, 
+        {
             "id": 1.5,
             "name": "Ek Bharat Shrestha Bharat (EBSB)",
+            "path": "ebsb",
+            "clubPage":Ebsb,
             "logoClub": ebsb,
             "logoPng": ebsb,
             "description": "Ek Bharat Shreshtha Bharat (EBSB) is a cultural club that brings together the rich tapestry of India's diverse cultures and traditions. At IIT Hyderabad, we take immense pride in celebrating our unity in diversity through various events and festivals that showcase the beauty and depth of Indian culture.",
-            "vision": "Our vision tenure is to organize events at a scale almost equal to or much greater than our past tenure. We would want to come up with further innovative events that cover the rich culture and heritage of uncovered parts of India."
-        }
+            "vision": "Our vision tenure is to organize events at a scale almost equal to or much greater than our past tenure. We would want to come up with further innovative events that cover the rich culture and heritage of uncovered parts of India.",
+            "team":[
+              {
+                "name": "Santoshi Gayatri",
+                "position":"Overall Head",
+                "photo":ebsb,
+                "rollno":"cs21btech11002"
+              },
+              {
+                "name": "Anand",
+                "position":"Web Head",
+                "photo":ebsb,
+                "rollno":"ep22btech11012"
+              },
+            ]
+          }
     ],
     "literary": [
         {
             "id": 2.0,
             "name": "Quiz Club",
+            "clubPage":Quiz,
+            "path":"quiz",
             "logoClub": writing,
             "logoPng": writing,
             "description": "The IITH Quiz Club is a group for people enthusiastic about testing their knowledge on a variety of subjects. The club members meet regularly to compete in quizzes about anything ranging to science to pop culture. The club give people a fun opportunity to learn new trivia, meet new people, and challenge oneself mentally.",
@@ -68,10 +140,42 @@ export const clubs = {
         {
             "id": 2.1,
             "name": "Writing Club",
+            "clubPage":Writing,
+            "path":"writing",
             "logoClub": writing,
             "logoPng": writing,
             "description": "We are a bunch of people who call ourselves writers. We gather our fellow writing enthusiasts at a place and conduct events, sessions and competitions. We, in short, enjoy, promote and indulge in having fun through the art of writing.",
             "vision": "We foresee numerous and diverse skilled writers to whom writing might be a hobby, an outlet, love, muse or career choice individually. Irrespective of language you write in, experience you have, genre you are obsessed with, form of writing you are into, you are always welcome to sit with us and discuss your work with us."
-        }
+        },
+        {
+            "id": 2.2,
+            "name": "Books & Movies Club (BMC)",
+            "clubPage":Writing,
+            "path":"writing",
+            "logoClub": writing,
+            "logoPng": writing,
+            "description": "",
+            "vision": ""
+        },
+        {
+            "id": 2.3,
+            "name": "Debate Club",
+            "clubPage":Writing,
+            "path":"writing",
+            "logoClub": writing,
+            "logoPng": writing,
+            "description": "",
+            "vision": ""
+        },
+        {
+            "id": 2.2,
+            "name": "Word & Board Games Club",
+            "clubPage":Writing,
+            "path":"writing",
+            "logoClub": writing,
+            "logoPng": writing,
+            "description": "",
+            "vision": ""
+        },
     ]
 }

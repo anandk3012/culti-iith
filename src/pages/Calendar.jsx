@@ -44,7 +44,7 @@ export default function CalendarComp() {
                 className="flex flex-col flex-wrap border-none p-5 bg-[#3E3E3A] shadow-md shadow-black text-white"
                 onClickDay={handleClick}
             />
-            <hr className=" w-[90%] md:w-[60%] my-10 mx-auto" />
+            <hr className=" w-[90%] md:w-[60%] my-10 mx-auto " />
             <div className="w-full flex flex-col items-center">
                 <div className="flex items-center w-[90%] md:w-1/2 text-3xl text-start  mb-5 gap-5">
                     <h1 className="ml-2">Events</h1>
