@@ -1,22 +1,24 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import { clubs } from '../data/clubData'
 import ClubCard from "../components/ClubCard";
 
 export default function Home() {
-  const [isCulti, setIsCulti] = useState(true);
+  const [isCulti, setIsCulti] = useState(() => {
+    return localStorage.getItem('group') === 'culti';
+  });
   const handleClick = () => {
     setIsCulti(!isCulti);
   }
 
-//   useEffect(() => {
-//     if (isCulti) {
-//         document.documentElement.classList.add('genre');
-//         localStorage.setItem('genre', 'culti');
-//     } else {
-//         document.documentElement.classList.remove('dark');
-//         localStorage.setItem('genre', 'lit');
-//     }
-// }, [isCulti]);
+  useEffect(() => {
+    if (isCulti) {
+      document.documentElement.classList.add('culti');
+      localStorage.setItem('group','culti');
+  } else {
+      document.documentElement.classList.remove('culti');
+      localStorage.setItem('group', 'lit');
+  }
+}, [isCulti]);
 
   // Clubs Data
   const cultiClubs = clubs.cultural;
@@ -27,7 +29,7 @@ export default function Home() {
     <div className='min-h-screen bg-[#dddddb] dark:bg-[#292927]  text-black dark:text-white'>
 
       {/* Main Landing Heading */}
-      <h1 className='flex flex-col justify-center items-center w-[90%] md:w-2/3 text-3xl md:text-5xl font-light text-center text-wrap py-5 mx-auto '><span> Cultural & Literary Council <br /> IIT Hyderabad </span></h1>
+      <h1 className='flex flex-col justify-center items-center w-[90%] md:w-2/3 text-3xl md:text-5xl font-medium lg:font-light text-center text-wrap py-5 mx-auto '><span> Cultural & Literary Council <br /> IIT Hyderabad </span></h1>
 
 
       {/* Clubs Section */}

@@ -16,6 +16,10 @@ import Ebsb from '../pages/clubPages/Ebsb'
 import Writing from '../pages/clubPages/Writing'
 import Quiz from '../pages/clubPages/Quiz'
 import Rdm from '../pages/clubPages/Rdm'
+import Bmc from '../pages/clubPages/Bmc'
+import Debate from '../pages/clubPages/Debate'
+import WordGames from '../pages/clubPages/WordGames'
+import Vibes from '../pages/clubPages/Vibes'
 
 export default function nonUserRoutes() {
   return (
@@ -29,16 +33,23 @@ export default function nonUserRoutes() {
           <Route path='/events' element={<CalendarComp />} />
 
           {/* ClubPages Routes */}
-          <Route path='/infocus' element={<Infocus />} />
-          <Route path='/shuffle' element={<Shuffle />} />
-          <Route path='/btl' element={<Btl />} />
-          <Route path='/gesture' element={<Gesture />} />
-          <Route path='/otaku' element={<Otaku />} />
-          <Route path='/ebsb' element={<Ebsb />} />
-          <Route path='/writing' element={<Writing />} />
-          <Route path='/quiz' element={<Quiz />} />
-          <Route path='/rdm' element={<Rdm />} />
-          {/* <Route path='/*' element={<Home />} /> */}
+            {/* Culti Clubs */}
+            <Route path='/infocus' element={<Infocus />} />
+            <Route path='/shuffle' element={<Shuffle />} />
+            <Route path='/btl' element={<Btl />} />
+            <Route path='/gesture' element={<Gesture />} />
+            <Route path='/otaku' element={<Otaku />} />
+            <Route path='/ebsb' element={<Ebsb />} />
+            <Route path='/rdm' element={<Rdm />} />
+            <Route path='/vibes' element={<Vibes />} />
+
+            {/* LitSoc */}
+            <Route path='/writing' element={<Writing />} />
+            <Route path='/bmc' element={<Bmc />} />
+            <Route path='/quiz' element={<Quiz />} />
+            <Route path='/debate' element={<Debate />} />
+            <Route path='/wordgames' element={<WordGames />} />
+
         </Routes>
       
     </div>

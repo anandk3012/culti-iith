@@ -38,16 +38,19 @@ export default function Nav1bar() {
     return (
         <div className='p-4 bg-[#dddddb] dark:bg-[#292927]'>
             <div className='w-full p-2 flex bg-transparent items-center dark:bg-[#3E3E3A] dark:text-[#FFC600] rounded-[3rem]'>
+                {/* Logo */}
                 <div className='w-2/3'>
                     <Link to="/" className='flex items-center text-xl md:ml-7'>
                         <img src={cultiLogo} alt="Club Logo" className='w-14 max-h-16' />
                     </Link>
                 </div>
 
-
+                {/* Navigation Links */}
                 <div className='lg:flex flex flex-col w-1/3 md:w-1/4  dark:text-[#FFC600]'>
+
+
                     <div className='flex justify-end gap-5'>
-                        {/* Dark Mode toggle Button */}
+                        {/* Dark Mode toggle Button for phones*/}
                         <div className='flex items-center justify-center lg:hidden'>
                             <button onClick={toggleDarkMode} >
                                 {darkMode ? (

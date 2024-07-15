@@ -5,6 +5,7 @@ import gesture from "../assets/clubImages/gesture.png"
 import otaku from "../assets/clubImages/otaku.png"
 import ebsb from "../assets/clubImages/ebsb.jpg"
 import writing from "../assets/clubImages/writingClub.png"
+import vibes from "../assets/clubImages/vibes.png"
 
 import Infocus from '../pages/clubPages/Infocus'
 import Shuffle from '../pages/clubPages/Shuffle'
@@ -12,8 +13,14 @@ import Btl from '../pages/clubPages/Btl'
 import Gesture from '../pages/clubPages/Gesture'
 import Otaku from '../pages/clubPages/Otaku'
 import Ebsb from '../pages/clubPages/Ebsb'
+import Vibes from '../pages/clubPages/Vibes'
+import Rdm from '../pages/clubPages/Rdm'
+
 import Writing from '../pages/clubPages/Writing'
 import Quiz from '../pages/clubPages/Quiz'
+import Bmc from '../pages/clubPages/Bmc'
+import Debate from '../pages/clubPages/Debate'
+import WordGames from '../pages/clubPages/WordGames'
 
 export const clubs = {
   "cultural": [
@@ -164,29 +171,60 @@ export const clubs = {
       "name": "Rang De Manch (RDM)",
       "title": "rdm",
       "path": "rdm",
-      "clubPage": Ebsb,
-      "logoClub": ebsb,
-      "logoPng": ebsb,
+      "clubPage": Rdm,
+      "logoClub": vibes,
+      "logoPng": vibes,
       "description": "Rang De Manch is the official drama club of IITH which works under the cultural council of IITH. It is a platform where the students can show their extra curricular activities related with acting. It presents a bunch of amazing events round the year from stage and street performances to mimes and comedy acts that entertain the junta thoroughly.",
       "vision": "The club aims to entertain people and along with that spread messages for the betterment of the society through mimes,street plays etc. Rang De Manch is a home to all the lovers of acting. A plethora of talented individuals who join every year to take forward IITH's rich legacy in dramatics. From writing plays, to direction and performance members get to learn the skills required for each of these jobs.",
       "team": [
         {
           "name": "Ayan",
           "position": "Overall Coordinator",
-          "photo": ebsb,
+          "photo": vibes,
           "rollno": "ch22btech11002"
         },
         {
           "name": "Labdhi",
           "position": "Swaang",
-          "photo": ebsb,
+          "photo": vibes,
           "rollno": "ic23btech11012"
         },
         {
           "name": "Vishnu",
           "position": "Awwfense",
-          "photo": ebsb,
+          "photo": vibes,
           "rollno": "me22btech11012"
+        },
+      ]
+    },
+    {
+      "id": 1.7,
+      "name": "Vibes",
+      "title": "vibes",
+      "path": "vibes",
+      "clubPage": Vibes,
+      "logoClub": vibes,
+      "logoPng": vibes,
+      "description": "Welcome to VIBES - The music club of IITH! We conduct regular jamming sessions, guitar sessions, vocal sessions etc. to encourage learning new things and having fun. We want to bring out the musician in everyone. Join us if you love to sing, play or write music! Vibes was the winner of the 'Best Cultural Club' title in the year 2017-18!",
+      "vision": "",
+      "team": [
+        {
+          "name": "Tanishq",
+          "position": "Coordinator",
+          "photo": vibes,
+          "rollno": "ms22btech11027"
+        },
+        {
+          "name": "Divya",
+          "position": "Coordinator",
+          "photo": vibes,
+          "rollno": "es22btech11012"
+        },
+        {
+          "name": "Rishit",
+          "position": "Coordinator",
+          "photo": vibes,
+          "rollno": "cs21btech11012"
         },
       ]
     },
@@ -218,7 +256,7 @@ export const clubs = {
       "id": 2.2,
       "name": "Books & Movies Club (BMC)",
       "title": "bmc",
-      "clubPage": Writing,
+      "clubPage": Bmc,
       "path": "bmc",
       "logoClub": writing,
       "logoPng": writing,
@@ -229,7 +267,7 @@ export const clubs = {
       "id": 2.3,
       "name": "Debate Club",
       "title": "debate",
-      "clubPage": Writing,
+      "clubPage": Debate,
       "path": "debate",
       "logoClub": writing,
       "logoPng": writing,
@@ -239,9 +277,9 @@ export const clubs = {
     {
       "id": 2.4,
       "name": "Word & Board Games Club",
-      "clubPage": Writing,
-      "path": "games",
-      "title": "games",
+      "clubPage": WordGames,
+      "path": "wordgames",
+      "title": "wordgames",
       "logoClub": writing,
       "logoPng": writing,
       "description": "",
