@@ -4,8 +4,9 @@ import btl from "../assets/clubImages/btl.png"
 import gesture from "../assets/clubImages/gesture.png"
 import otaku from "../assets/clubImages/otaku.png"
 import ebsb from "../assets/clubImages/ebsb.jpg"
-import writing from "../assets/clubImages/writingClub.png"
 import vibes from "../assets/clubImages/vibes.png"
+
+import writing from "../assets/clubImages/writingClub.png"
 
 import Infocus from '../pages/clubPages/Infocus'
 import Shuffle from '../pages/clubPages/Shuffle'
