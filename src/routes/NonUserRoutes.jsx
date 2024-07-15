@@ -15,6 +15,7 @@ import Otaku from '../pages/clubPages/Otaku'
 import Ebsb from '../pages/clubPages/Ebsb'
 import Writing from '../pages/clubPages/Writing'
 import Quiz from '../pages/clubPages/Quiz'
+import Rdm from '../pages/clubPages/Rdm'
 
 export default function nonUserRoutes() {
   return (
@@ -36,6 +37,7 @@ export default function nonUserRoutes() {
           <Route path='/ebsb' element={<Ebsb />} />
           <Route path='/writing' element={<Writing />} />
           <Route path='/quiz' element={<Quiz />} />
+          <Route path='/rdm' element={<Rdm />} />
           {/* <Route path='/*' element={<Home />} /> */}
         </Routes>
       

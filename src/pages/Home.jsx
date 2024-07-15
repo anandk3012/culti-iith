@@ -8,6 +8,16 @@ export default function Home() {
     setIsCulti(!isCulti);
   }
 
+//   useEffect(() => {
+//     if (isCulti) {
+//         document.documentElement.classList.add('genre');
+//         localStorage.setItem('genre', 'culti');
+//     } else {
+//         document.documentElement.classList.remove('dark');
+//         localStorage.setItem('genre', 'lit');
+//     }
+// }, [isCulti]);
+
   // Clubs Data
   const cultiClubs = clubs.cultural;
   const litClubs = clubs.literary;
