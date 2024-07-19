@@ -1,0 +1,51 @@
+/* Load1.css */
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: #FFC600; /* You can use your theme color */
+  border-radius: 50%;
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-100px); /* Adjust the height of the bounce */
+  }
+}
+
+.loading-complete .circle {
+  animation: fall 1.5s ease-out forwards, shoot 0.5s 0.5s ease-in forwards;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-100px); /* Adjust this to the current height of the bounce */
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shoot {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0); /* Adjust the height of the shoot */
+    transform: scale(300);
+  }
+}
