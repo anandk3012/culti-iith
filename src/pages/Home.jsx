@@ -26,7 +26,7 @@ export default function Home() {
   // console.log(cultiClubs)
 
   return (
-    <div className='min-h-screen bg-[#dddddb] dark:bg-[#292927]  text-black dark:text-white'>
+    <div className='min-h-screen bg-[#f5f5f5] dark:bg-[#292927]  text-black dark:text-white'>
 
       {/* Main Landing Heading */}
       <h1 className='flex flex-col justify-center items-center w-[90%] md:w-2/3 text-3xl md:text-5xl font-medium lg:font-light text-center text-wrap py-5 mx-auto '><span> Cultural & Literary Council <br /> IIT Hyderabad </span></h1>
@@ -35,7 +35,7 @@ export default function Home() {
       {/* Clubs Section */}
       <div className='min-h-screen w-[80%] mx-auto' >
         <h1 className='flex items-center gap-5 text-2xl md:text-4xl p-4 mb-5 mt-20'> <hr className="w-[45%] md:w-[5%] border-black dark:border-white" /> Clubs <hr className="w-[45%] md:w-[80%] border-black dark:border-white " /> </h1>
-        <div className='w-full bg-white dark:bg-[#3E3E3A] rounded-[2rem] p-5 flex gap-5 justify-start md:text-lg'>
+        <div className='w-full shadow-slate-500 shadow-sm dark:shadow-none bg-white dark:bg-[#3E3E3A] rounded-[2rem] p-5 flex gap-5 justify-start md:text-lg'>
           <button className={`${isCulti ? ' font-semibold text-black dark:text-[#FFC600] ' : 'dark:text-white '} p-1 `} onClick={handleClick} >Cultural</button>
           <button className={`${!isCulti ? ' font-semibold text-black dark:text-[#FFC600] ' : 'dark:text-white '} p-1 `} onClick={handleClick} >LitSoc</button>
         </div>
